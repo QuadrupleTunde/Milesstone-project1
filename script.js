@@ -1,16 +1,16 @@
-playGame = () =>{
+const playGame = () =>{
     let p1Score = 0;
     let p2Socre = 0;
 
-    startGame = () => {
-        let startButton = document.getElementsByClassName(".intro-page button");
-        let  introScreen = document.querySelector(".intro-pager");
-        let matchScreen = document.querySelector(".intro-page");
+     const startGame = () => {
+        const startButton = document.querySelector(".start button");
+        const introScreen = document.querySelector(".intro-page");
+        const matchScreen = document.querySelector(".match-winner");
         startButton.addEventListener("click", ()=>{
             console.log(startButton)
 
-        // introPage.classList.add("fadeOut");
-        // optionPage.classList.add("fadeIn");
+        // introScreen.classList.add("fadeOut");
+        // matchScreen.classList.add("fadeIn");
 
         })
 
@@ -18,8 +18,8 @@ playGame = () =>{
 
 
     };
+    
 
-
-    startGame ()
+    startGame()
 }
 playGame()
