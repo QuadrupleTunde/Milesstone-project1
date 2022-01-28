@@ -35,6 +35,7 @@ body{
     align-items: center;
     flex-direction: column;
     height: 50vh;
+    transition: opacity 1s ease;
 }
 .intro-page h1{
     font-size: 40px;
@@ -70,6 +71,9 @@ body{
     transform: translate(-50%, -50%);
     padding-top:60px;
     cursor:pointer;
+    opacity:0;
+    transition: opacity 1s ease 1s;
+    
 }
 .option-main{
     padding-top: 50px;
@@ -79,16 +83,14 @@ body{
     align-items: center;
     color: white;
 }
-.option-select, .option-btn{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
+.option-select, .option{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-content: center;
 }
-.option-btn{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.option{
+    
     padding-top: 40px;
 }
         
@@ -113,5 +115,5 @@ body{
     
     div.fadeOut{
         opacity: 0;
-        pointer-events:all,
+        pointer-events:none,
     }
