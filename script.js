@@ -23,16 +23,16 @@ const playGame = () =>{
         const player1hand = document.querySelector(".player1-image")
         const player2hand = document.querySelector(".player2-image")
         // clearBoard= document.querySelector(".reset-button")
-        // const winner = document.querySelector(".option-main")
-        // clearBoard.addEventListener("click", ()=>{
-        //     winner.textContent= "Choose an option";
-        //     player1hand.textContent = initp1Score;
-        //     player2hand.textContent = initp2Score;
-        //     localStorage.setItem('p1Score', initp1Score)
-        //     localStorage.setItem('p2Score', initp2Score)
-        //     p1Score = initp1Score;
-        //     p2Score = initp2Score;
-        //})
+        // // const winner = document.querySelector(".option-main")
+        //  clearBoard.addEventListener("click", ()=>{
+        // //     winner.textContent= "Choose an option";
+        //  player1hand.textContent = initp1Score;
+        //  player2hand.textContent = initp2Score;
+        // localStorage.setItem('p1Score', initp1Score)
+        //   localStorage.setItem('p2Score', initp2Score)
+        // //     p1Score = initp1Score;
+        // //     p2Score = initp2Score;
+        // })
         
         let player2option = ["Rock", "Paper", "Scissors"]
         options.forEach(option => {
@@ -69,11 +69,13 @@ const playGame = () =>{
     //  compare player1Choice & player2Choice
      const compareHands =(player1Choice, player2Choice)=>{
          const winner = document.querySelector(".option-main")
+         console.log(player1Choice, player2Choice)
         
         //  for a tie
         if(player1Choice === player2Choice){
+            console.log(winner)
             winner.textContext = "It is a tie";
-            updateScore();
+            updateScore()
             return;
         }
         // for rock
@@ -116,9 +118,11 @@ const playGame = () =>{
             winner.textContent = "player2 wins"
             p2Score++
             updateScore()
+            
             return;
+            
         }
-
+        winner.textContext = "It is a tie";
 
      }
 
