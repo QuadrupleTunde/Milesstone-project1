@@ -24,15 +24,17 @@ const playGame = () =>{
         const player1hand = document.querySelector(".player1-image")
         const player2hand = document.querySelector(".player2-image")
         clearBoard= document.querySelector(".reset-button")
-        //const winner = document.querySelector(".option-main")
+        const winner = document.querySelector(".option-main")
+        
+        //clear screen
          clearBoard.addEventListener("click", ()=>{
-        // //     winner.textContent= "Choose an option";
+        winner.textContent= "Choose an option";
          player1Score.textContent = initp1Score;
          player2Score.textContent = initp2Score;
-        // localStorage.setItem('p1Score', initp1Score)
-        //   localStorage.setItem('p2Score', initp2Score)
-        // //     p1Score = initp1Score;
-        // //     p2Score = initp2Score;
+         localStorage.setItem('p1Score', initp1Score)
+        localStorage.setItem('p2Score', initp2Score)
+         p1Score = initp1Score;
+        p2Score = initp2Score; 
         })
         
         let player2option = ["Rock", "Paper", "Scissors"]
@@ -46,9 +48,11 @@ const playGame = () =>{
                 // update image
                 player1hand.src= `./${this.textContent}.jpg` ;
                 player2hand.src=`./${player2Choice}.jpg`;
+
+                player1hand.style.animation = "shakeplayer1 2s ease";
+                player2hand.style.animation = "shakeplayer2 2s ease";
+               
             });
-            
-           
         });
 
      }
@@ -92,6 +96,22 @@ const playGame = () =>{
             updateScore()
             return;
         }
+
+        // for paper
+        if(player1Choice === "Paper"){
+            if(player2Choice === "Scissors"){
+                winner.textContent = "player2 wins"
+                p1Score++
+                updateScore()
+                return;
+            }
+        }else{
+            winner.textContent = "player1 wins"
+            p2Score++
+            updateScore()
+            return;
+            
+        }
          // for scissors
          if(player1Choice === "Scissors"){
             if(player2Choice === "Rock"){
@@ -106,21 +126,7 @@ const playGame = () =>{
             updateScore()
             return;
         }
-        // for paper
-        if(player1Choice === "Paper"){
-            if(player2Choice === "Scissors"){
-                winner.textContent = "player1 wins"
-                p1Score++
-                updateScore()
-                return;
-            }
-        }else{
-            winner.textContent = "player2 wins"
-            p2Score++
-            updateScore()
-            return;
-            
-        }
+        
     
      }
      

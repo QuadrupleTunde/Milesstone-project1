@@ -35,12 +35,13 @@ h2{
 
 .intro-page{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    height: 50vh;
+    height: 60vh;
     transition: opacity 1s ease;
-    padding-top: 50px;
+    padding-top: 90px;
+    
 }
 .intro-page h1{
     font-size: 40px;
@@ -57,24 +58,12 @@ h2{
     height: 40px;
 }
 
-
-.tabble-div{
-    padding-left: 15px;
-    height: 15vh;
-}
-
-
-.player-table,th, td{
-    border: 1px solid purple;
-    background-color: white;
-}
-
 .match-winner{
     position: absolute;
     top:40%;
     left:50%;
     transform: translate(-50%, -50%);
-    padding-top:110px;
+    padding-top:130px;
     cursor:pointer;
     opacity:0;
     transition: opacity 1s ease 1s;
@@ -143,6 +132,29 @@ width: 20vw;
         background-color: purple;
         color: white;
     }
-    @media (screen) {
-        
-    }
+    @keyframes shakeplayer1 {
+        0% {transform: rotateY(180)translateY(0PX)}
+        15% {transform: rotateY(180)translateY(-50PX)}
+        25% {transform: rotateY(180)translateY(0PX)}
+        35% {transform: rotateY(180)translateY(-50PX)}
+        45% {transform: rotateY(180)translateY(0PX)}
+        55% {transform: rotateY(180)translateY(-50PX)}
+        65% {transform: rotateY(180)translateY(0PX)}
+        75% {transform: rotateY(180)translateY(-50PX)}
+        85% {transform: rotateY(180)translateY(0PX)}
+        100% {transform: rotateY(180)translateY(-50PX)}
+    } 
+
+
+    @keyframes shakeplayer2 {
+        0% {transform: translateY(0PX)}
+        15% {transform:translateY(-50PX)}
+        25% {transform: translateY(0PX)}
+        35% {transform: translateY(-50PX)}
+        45% {transform: translateY(0PX)}
+        55% {transform: translateY(-50PX)}
+        65% {transform: translateY(0PX)}
+        75% {transform: translateY(-50PX)}
+        85% {transform: translateY(0PX)}
+        100% {transform:translateY(-50PX)}
+    } 
