@@ -77,14 +77,12 @@ h2{
     align-items: center;
     color: white;
 }
-.option-select, .option{
-   display: flex;
+
+.option{
+    display: flex;
    flex-direction: row;
    justify-content: space-around;
    align-content: center;
-}
-.option{
-    
     padding-top: 40px;
 }
 .player1-image,.player2-image{
@@ -103,7 +101,7 @@ width: 20vw;
     background-color: purple;
     color: white;
     border-radius: 3px;
-    width: 9vw;
+    width: 13vw;
     height: 4vh;
     }
 
@@ -133,28 +131,28 @@ width: 20vw;
         color: white;
     }
     @keyframes shakeplayer1 {
-        0% {transform: rotateY(180)translateY(0PX)}
-        15% {transform: rotateY(180)translateY(-50PX)}
-        25% {transform: rotateY(180)translateY(0PX)}
-        35% {transform: rotateY(180)translateY(-50PX)}
-        45% {transform: rotateY(180)translateY(0PX)}
-        55% {transform: rotateY(180)translateY(-50PX)}
-        65% {transform: rotateY(180)translateY(0PX)}
-        75% {transform: rotateY(180)translateY(-50PX)}
-        85% {transform: rotateY(180)translateY(0PX)}
-        100% {transform: rotateY(180)translateY(-50PX)}
+        0% {transform: rotateY(180deg)translateY(0PX)};
+        15% {transform: rotateY(180deg)translateY(-50PX)};
+        25% {transform: rotateY(180deg)translateY(0PX)};
+        35% {transform: rotateY(180deg)translateY(-50PX)};
+        45% {transform: rotateY(180deg)translateY(0PX)};
+        55% {transform: rotateY(180deg)translateY(-50PX)};
+        65% {transform: rotateY(180deg)translateY(0PX)};
+        75% {transform: rotateY(180deg)translateY(-50PX)};
+        85% {transform: rotateY(180deg)translateY(0PX)};
+        100% {transform: rotateY(180deg)translateY(-50PX)};
     } 
 
 
     @keyframes shakeplayer2 {
-        0% {transform: translateY(0PX)}
-        15% {transform:translateY(-50PX)}
-        25% {transform: translateY(0PX)}
-        35% {transform: translateY(-50PX)}
-        45% {transform: translateY(0PX)}
-        55% {transform: translateY(-50PX)}
-        65% {transform: translateY(0PX)}
-        75% {transform: translateY(-50PX)}
-        85% {transform: translateY(0PX)}
-        100% {transform:translateY(-50PX)}
+        0% {transform: translateY(0PX)};
+        15% {transform:translateY(-50PX)};
+        25% {transform: translateY(0PX)};
+        35% {transform: translateY(-50PX)};
+        45% {transform: translateY(0PX)};
+        55% {transform: translateY(-50PX)};
+        65% {transform: translateY(0PX)};
+        75% {transform: translateY(-50PX)};
+        85% {transform: translateY(0PX)};
+        100% {transform:translateY(-50PX)};
     } 

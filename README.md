@@ -41,8 +41,8 @@ Either one of the players can win or lose.
 | ---- | ----- |
 | Sun. 01/23 | Create GitHub repository. Complete README.md. |
 | Tue. 01/25 |      |implemente my pseudocode
-| Thu. 01/27 |      |save the data in local storage and add some new features 
-| Sun. 01/30 |      |style it(UI and UX) knowledge
+| Thu. 01/27 |      |style it(UI and UX) knowledge
+| Sun. 01/30 |      |save the data in local storage and add some new features 
 | Tue. 02/01 |      |testrun and debug before submission
 | Thu. 02/03 | Deploy to GitHub Pages. Submit completed project. Project presentations. |
 

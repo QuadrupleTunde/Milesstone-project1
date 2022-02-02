@@ -18,14 +18,24 @@ const playGame = () =>{
 
 
     };
+
+    
               //playMatch
     const playMatch=()=>{
-        const options = document.querySelectorAll(".option button")
-        const player1hand = document.querySelector(".player1-image")
-        const player2hand = document.querySelector(".player2-image")
-        clearBoard= document.querySelector(".reset-button")
-        const winner = document.querySelector(".option-main")
-        
+        const options = document.querySelectorAll(".option button");
+        const player1hand = document.querySelector(".player1-image");
+        const player2hand = document.querySelector(".player2-image");
+        clearBoard= document.querySelector(".reset-button");
+        const winner = document.querySelector(".option-main");
+        const hands= document.querySelectorAll(".hands");
+        //console.log(hands)
+        hands.forEach(hand=>{
+            hand.addEventListener("animationend", function(){
+                this.style.animation= "";
+            });
+        });
+
+
         //clear screen
          clearBoard.addEventListener("click", ()=>{
         winner.textContent= "Choose an option";
@@ -42,12 +52,15 @@ const playGame = () =>{
             option.addEventListener("click", function(){
             let player2Number = Math.floor(Math.random() * 3);
             const player2Choice = player2option[player2Number]
-                // console.log(player2Choice)
-                compareHands (this.textContent, player2Choice );
+           
+                 // console.log(player2Choice)
+                 compareHands (this.textContent, player2Choice );
 
-                // update image
-                player1hand.src= `./${this.textContent}.jpg` ;
-                player2hand.src=`./${player2Choice}.jpg`;
+                 // update image
+                 player1hand.src= `./${this.textContent}.jpg` ;
+                 player2hand.src=`./${player2Choice}.jpg`;
+
+               
 
                 player1hand.style.animation = "shakeplayer1 2s ease";
                 player2hand.style.animation = "shakeplayer2 2s ease";
