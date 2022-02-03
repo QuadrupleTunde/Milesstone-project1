@@ -55,8 +55,12 @@ const playGame = () =>{
                   compareHands (this.textContent, player2Choice );
 
                   // update image
+                //   player1hand.setAttribute("src", `./${this.textContent}.jpg`)
+                //   player2hand.setAttribute("src", `./${player2Choice}.jpg`)
                   player1hand.src= `./${this.textContent}.jpg` ;
                   player2hand.src=`./${player2Choice}.jpg`;
+
+                //   animation 
                   player1hand.addEventListener('animationend', () => {                         
                     player1hand.classList.remove('animate1')
                     })
