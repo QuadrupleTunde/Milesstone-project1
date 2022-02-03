@@ -13,27 +13,24 @@ const playGame = () =>{
            introScreen.classList.add("fadeOut");
             matchScreen.classList.add("fadeIn");
         });
-
-  
-
-
     };
-
+   
     
               //playMatch
     const playMatch=()=>{
+        
         const options = document.querySelectorAll(".option button");
         const player1hand = document.querySelector(".player1-image");
         const player2hand = document.querySelector(".player2-image");
         clearBoard= document.querySelector(".reset-button");
         const winner = document.querySelector(".option-main");
-        const hands= document.querySelectorAll(".hands");
-        //console.log(hands)
-        hands.forEach(hand=>{
-            hand.addEventListener("animationend", function(){
-                this.style.animation= "";
-            });
-        });
+        // const hands= document.querySelectorAll(".hands");
+        // //console.log(hands)
+        // hands.forEach(hand=>{
+        //     hand.addEventListener("animationend", function(){
+        //         hand.style.animation= "";
+        //     });
+        // });
 
 
         //clear screen
@@ -53,28 +50,36 @@ const playGame = () =>{
             let player2Number = Math.floor(Math.random() * 3);
             const player2Choice = player2option[player2Number]
            
-                 // console.log(player2Choice)
-                 compareHands (this.textContent, player2Choice );
+                
+                  // console.log(player2Choice)
+                  compareHands (this.textContent, player2Choice );
 
-                 // update image
-                 player1hand.src= `./${this.textContent}.jpg` ;
-                 player2hand.src=`./${player2Choice}.jpg`;
+                  // update image
+                  player1hand.src= `./${this.textContent}.jpg` ;
+                  player2hand.src=`./${player2Choice}.jpg`;
+                  player1hand.addEventListener('animationend', () => {                         
+                    player1hand.classList.remove('animate1')
+                    })
+                 player2hand.addEventListener('animationend', () => {
+                    player2hand.classList.remove('animate2')
+                    })
+                    
+                        player1hand.classList.remove('animate1')
+                setTimeout(() => player1hand.classList.add('animate1'), 25);
 
-               
-
-                player1hand.style.animation = "shakeplayer1 2s ease";
-                player2hand.style.animation = "shakeplayer2 2s ease";
-               
+                    player2hand.classList.remove('animate2');
+            setTimeout(() => player2hand.classList.add('animate2'), 25);
+                
             });
         });
 
      }
 
-    //  update score
-    const updateScore = ()=>{
-        player1Score = document.querySelector(".player1score")
-        player2Score = document.querySelector(".player2score")
 
+    //  update score
+    const player1Score = document.querySelector(".player1score")
+    const player2Score = document.querySelector(".player2score")
+    const updateScore = ()=>{
         player1Score.textContent = p1Score
         player2Score.textContent = p2Score
         localStorage.setItem('p1Score', p1Score)
@@ -83,7 +88,7 @@ const playGame = () =>{
         p2Score = parseInt(localStorage.getItem('p2Score'));
 
     }
-
+    
     //  compare player1Choice & player2Choice
      const compareHands =(player1Choice, player2Choice)=>{
          const winner = document.querySelector(".option-main")
@@ -142,7 +147,7 @@ const playGame = () =>{
         
     
      }
-     
+
 
      playMatch()
 
