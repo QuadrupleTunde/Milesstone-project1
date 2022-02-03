@@ -63,6 +63,8 @@ const playGame = () =>{
                  player2hand.addEventListener('animationend', () => {
                     player2hand.classList.remove('animate2')
                     })
+                    player1hand.classList.add('animate1');
+                    player2hand.classList.add('animate2');
                     
                         player1hand.classList.remove('animate1')
                 setTimeout(() => player1hand.classList.add('animate1'), 25);
