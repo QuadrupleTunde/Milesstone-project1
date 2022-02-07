@@ -112,7 +112,7 @@ width: 20vw;
     
     div.fadeOut{
         opacity: 0;
-        pointer-events:none,
+        pointer-events:none;
     }
 
     .scoreClear{

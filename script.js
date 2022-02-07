@@ -1,4 +1,4 @@
-
+// startpage
 const playGame = () =>{
     let p1Score = 0;
     let p2Score = 0;
@@ -51,13 +51,13 @@ const playGame = () =>{
             const player2Choice = player2option[player2Number]
            
                 
-                  // console.log(player2Choice)
-                  compareHands (this.textContent, player2Choice );
+                // comparehands
+                  compareHands (this.id, player2Choice );
 
                   // update image
                 //   player1hand.setAttribute("src", `./${this.textContent}.jpg`)
                 //   player2hand.setAttribute("src", `./${player2Choice}.jpg`)
-                  player1hand.src= `./${this.textContent}.jpg` ;
+                  player1hand.src= `./${this.id}.jpg` ;
                   player2hand.src=`./${player2Choice}.jpg`;
 
                 //   animation 
@@ -129,7 +129,8 @@ const playGame = () =>{
                 updateScore()
                 return;
             }
-        }else{
+        }
+        else{
             winner.textContent = "player1 wins"
             p2Score++
             updateScore()
@@ -144,7 +145,8 @@ const playGame = () =>{
                 updateScore()
                 return;
             }
-        }else{
+        }
+        else{
             winner.textContent = "player1 wins"
             p1Score++
             updateScore()
